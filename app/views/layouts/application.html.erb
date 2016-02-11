@@ -10,7 +10,7 @@
 </head>
 <body>
   <header id="main_navigation" class="clearfix">
-    <a href="#" class="name">Delaine Lawrence</a>
+    <%= link_to "Delaine Lawrence", root_path, class: "name" %>
     <nav>
       <%= link_to "Articles", posts_path %>
       <a href="#">Projects</a>
@@ -18,7 +18,16 @@
     </nav>
   </header>
 
-<%= yield %>
+  <%= yield %>
+
+  <footer id="main_footer">
+    <p class="copyright">&copy;2015 Delaine Lawrence</p>
+    <nav>
+      <a href="https://twitter.com/delaine_law" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/delaine-lawrence-85754789" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/Delaine" target="_blank"><i class="fa fa-github"></i></a>
+    </nav>
+  </footer>
 
 </body>
 </html>
