@@ -13,10 +13,10 @@ class PostsController < ApplicationController
     @post = Post.new post_params
 
     if @post.save
-      redirect_to @post, notice: "Hellz yeah, Lawrence! Your article was successfully saved!"
+      redirect_to @post, notice: "Hellz yeah, Delaine! Your article was successfully saved!"
     else
-    render 'new', notice: "Oh no, Lawrence! I was unable to save your post."
-    end   
+      render 'new', notice: "Oh no, Delaine! I was unable to save your post."
+    end
   end
 
   def show
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to post_path
+    redirect_to posts_path
   end
 
   private
